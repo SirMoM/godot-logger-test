@@ -9,7 +9,6 @@ info   |	✗X	|	X	|	✓	|	✓	|	✓	|
 warn   |	X	|	X	|	X	|	✓	|	✓	|
 error  |	X	|	X	|	X	|	x	|	✓	|"""
 
-
 onready var feedback_label = $RichTextLabel
 
 var standart_module
@@ -19,24 +18,29 @@ var logfile_module
 
 func _ready() -> void:
 	standart_module = Logger.get_module()
-	
+
 	named_module = Logger.get_module("App")
-	
+
 	logfile_module = Logger.get_module("FILE")
 	logfile_module.external_sink = Logger.Logfile.new("res://logs/Logger.log")
-	logfile_module.output_strategies = [Logger.STRATEGY_EXTERNAL_SINK,
-	Logger.STRATEGY_EXTERNAL_SINK, Logger.STRATEGY_EXTERNAL_SINK,
-	Logger.STRATEGY_EXTERNAL_SINK, Logger.STRATEGY_EXTERNAL_SINK]
+	logfile_module.output_strategies = [
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK
+	]
 	print()
 	print("##################################################################")
 	print()
+
 
 func test_cases(_loglevel, _module = null):
 	if _module:
 		Logger.get_module(_module).output_level = _loglevel
 	else:
 		Logger.get_module().output_level = _loglevel
-	
+
 	test_all_levels(_module)
 	print("##################################################################")
 	print()
@@ -49,12 +53,13 @@ func test_all_levels(_module):
 		Logger.info("Info log!", _module)
 		Logger.warn("Warn log!", _module)
 		Logger.error("Error log!", _module)
-	else: 
+	else:
 		Logger.verbose("Verbose log!")
 		Logger.debug("Debug log!")
 		Logger.info("Info log!")
 		Logger.warn("Warn log!")
 		Logger.error("Error log!")
+
 
 func _on_TestsVerbose_pressed(module) -> void:
 	var module_name
@@ -67,9 +72,8 @@ func _on_TestsVerbose_pressed(module) -> void:
 	if module == 2:
 		test_cases(Logger.VERBOSE, "FILE")
 		module_name = "FILE"
-		
-	feedback_label.text += "%s verbose test done!\n" % module_name# + debug_table 
-	
+
+	feedback_label.text += "%s verbose test done!\n" % module_name  # + debug_table 
 
 
 func _on_TestsDebug_pressed(module) -> void:
@@ -83,7 +87,8 @@ func _on_TestsDebug_pressed(module) -> void:
 	if module == 2:
 		test_cases(Logger.DEBUG, "FILE")
 		module_name = "FILE"
-	feedback_label.text += "%s debug test done!\n" % module_name# + debug_table 
+	feedback_label.text += "%s debug test done!\n" % module_name  # + debug_table 
+
 
 func _on_TestsInfo_pressed(module) -> void:
 	var module_name
@@ -96,7 +101,8 @@ func _on_TestsInfo_pressed(module) -> void:
 	if module == 2:
 		test_cases(Logger.INFO, "FILE")
 		module_name = "FILE"
-	feedback_label.text += "%s info test done!\n"% module_name# + debug_table 
+	feedback_label.text += "%s info test done!\n" % module_name  # + debug_table 
+
 
 func _on_TestsWarn_pressed(module) -> void:
 	var module_name
@@ -109,7 +115,7 @@ func _on_TestsWarn_pressed(module) -> void:
 	if module == 2:
 		test_cases(Logger.WARN, "FILE")
 		module_name = "FILE"
-	feedback_label.text += "%s warn test done!\n"% module_name# + debug_table 
+	feedback_label.text += "%s warn test done!\n" % module_name  # + debug_table 
 
 
 func _on_TestsError_pressed(module) -> void:
@@ -123,22 +129,21 @@ func _on_TestsError_pressed(module) -> void:
 	if module == 2:
 		test_cases(Logger.ERROR, "FILE")
 		module_name = "FILE"
-	feedback_label.text += "%s error test done!\n" % module_name# + debug_table 
+	feedback_label.text += "%s error test done!\n" % module_name  # + debug_table 
 
 
 func _on_AutomaticTest_pressed() -> void:
-	for level in range(0,5):
+	for level in range(0, 5):
 		test_cases(level)
-		feedback_label.text += "Main %s test done!\n" % Logger.LEVELS[level]# + debug_table
+		feedback_label.text += "Main %s test done!\n" % Logger.LEVELS[level]  # + debug_table
 	feedback_label.text += "All main tests done!\n\n"
-	
-	for level in range(0,5):
+
+	for level in range(0, 5):
 		test_cases(level, "App")
 		feedback_label.text += "App %s test done!\n" % Logger.LEVELS[level]
 	feedback_label.text += "All app tests done!\n\n"
-	
-	for level in range(0,5):
+
+	for level in range(0, 5):
 		test_cases(level, "FILE")
 		feedback_label.text += "App %s test done!\n" % Logger.LEVELS[level]
 	feedback_label.text += "All FILE tests done!\n\n"
-		
