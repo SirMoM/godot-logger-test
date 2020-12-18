@@ -1,0 +1,220 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://LoggerTests.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutomaticTest" type="Button" parent="."]
+margin_right = 1024.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run all tests"
+
+[node name="ManualTest" type="HBoxContainer" parent="."]
+margin_top = 54.0
+margin_right = 1024.0
+margin_bottom = 364.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Standart_Logger" type="VBoxContainer" parent="ManualTest"]
+margin_right = 338.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ManualTest/Standart_Logger"]
+margin_right = 338.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+text = "Standart Logger Tests"
+align = 1
+valign = 1
+
+[node name="TestsVerbose" type="Button" parent="ManualTest/Standart_Logger"]
+margin_top = 44.0
+margin_right = 338.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: verbose"
+
+[node name="TestsDebug" type="Button" parent="ManualTest/Standart_Logger"]
+margin_top = 98.0
+margin_right = 338.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: debug"
+
+[node name="TestsInfo" type="Button" parent="ManualTest/Standart_Logger"]
+margin_top = 152.0
+margin_right = 338.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: info"
+
+[node name="TestsWarn" type="Button" parent="ManualTest/Standart_Logger"]
+margin_top = 206.0
+margin_right = 338.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: warn"
+
+[node name="TestsError" type="Button" parent="ManualTest/Standart_Logger"]
+margin_top = 260.0
+margin_right = 338.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: error"
+
+[node name="NamedLogger" type="VBoxContainer" parent="ManualTest"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ManualTest/NamedLogger"]
+margin_right = 339.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+text = "Standart Logger Tests"
+align = 1
+valign = 1
+
+[node name="TestsVerbose" type="Button" parent="ManualTest/NamedLogger"]
+margin_top = 44.0
+margin_right = 339.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: verbose"
+
+[node name="TestsDebug" type="Button" parent="ManualTest/NamedLogger"]
+margin_top = 98.0
+margin_right = 339.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: debug"
+
+[node name="TestsInfo" type="Button" parent="ManualTest/NamedLogger"]
+margin_top = 152.0
+margin_right = 339.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: info"
+
+[node name="TestsWarn" type="Button" parent="ManualTest/NamedLogger"]
+margin_top = 206.0
+margin_right = 339.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: warn"
+
+[node name="TestsError" type="Button" parent="ManualTest/NamedLogger"]
+margin_top = 260.0
+margin_right = 339.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: error"
+
+[node name="LogfileLogger" type="VBoxContainer" parent="ManualTest"]
+margin_left = 685.0
+margin_right = 1024.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ManualTest/LogfileLogger"]
+margin_right = 339.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+text = "Standart Logger Tests"
+align = 1
+valign = 1
+
+[node name="TestsVerbose" type="Button" parent="ManualTest/LogfileLogger"]
+margin_top = 44.0
+margin_right = 339.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: verbose"
+
+[node name="TestsDebug" type="Button" parent="ManualTest/LogfileLogger"]
+margin_top = 98.0
+margin_right = 339.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: debug"
+
+[node name="TestsInfo" type="Button" parent="ManualTest/LogfileLogger"]
+margin_top = 152.0
+margin_right = 339.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: info"
+
+[node name="TestsWarn" type="Button" parent="ManualTest/LogfileLogger"]
+margin_top = 206.0
+margin_right = 339.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: warn"
+
+[node name="TestsError" type="Button" parent="ManualTest/LogfileLogger"]
+margin_top = 260.0
+margin_right = 339.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 0, 50 )
+text = "Run tests: error"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_top = 368.0
+margin_right = 1024.0
+margin_bottom = 393.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_top = 397.0
+margin_right = 1024.0
+margin_bottom = 547.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_vertical = 3
+custom_styles/normal = SubResource( 1 )
+custom_colors/default_color = Color( 0.0117647, 0.541176, 0.0980392, 1 )
+text = "Only x sould be logged"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_top = 551.0
+margin_right = 1024.0
+margin_bottom = 581.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+margin_top = 585.0
+margin_right = 1024.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 0, 25 )
+[connection signal="pressed" from="ManualTest/Standart_Logger/TestsVerbose" to="." method="_on_TestsVerbose_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="ManualTest/Standart_Logger/TestsDebug" to="." method="_on_TestsDebug_pressed"]
+[connection signal="pressed" from="ManualTest/Standart_Logger/TestsInfo" to="." method="_on_TestsInfo_pressed"]
+[connection signal="pressed" from="ManualTest/Standart_Logger/TestsWarn" to="." method="_on_TestsWarn_pressed"]
+[connection signal="pressed" from="ManualTest/Standart_Logger/TestsError" to="." method="_on_TestsError_pressed"]
+[connection signal="pressed" from="ManualTest/NamedLogger/TestsVerbose" to="." method="_on_TestsVerbose_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="ManualTest/NamedLogger/TestsDebug" to="." method="_on_TestsDebug_pressed"]
+[connection signal="pressed" from="ManualTest/NamedLogger/TestsInfo" to="." method="_on_TestsInfo_pressed"]
+[connection signal="pressed" from="ManualTest/NamedLogger/TestsWarn" to="." method="_on_TestsWarn_pressed"]
+[connection signal="pressed" from="ManualTest/NamedLogger/TestsError" to="." method="_on_TestsError_pressed"]
+[connection signal="pressed" from="ManualTest/LogfileLogger/TestsVerbose" to="." method="_on_TestsVerbose_pressed"]
+[connection signal="pressed" from="ManualTest/LogfileLogger/TestsDebug" to="." method="_on_TestsDebug_pressed"]
+[connection signal="pressed" from="ManualTest/LogfileLogger/TestsInfo" to="." method="_on_TestsInfo_pressed"]
+[connection signal="pressed" from="ManualTest/LogfileLogger/TestsWarn" to="." method="_on_TestsWarn_pressed"]
+[connection signal="pressed" from="ManualTest/LogfileLogger/TestsError" to="." method="_on_TestsError_pressed"]
