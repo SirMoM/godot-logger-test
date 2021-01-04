@@ -26,6 +26,7 @@ func send_log(output, level: int):
 	var log_msg = {
 		"level": level,
 		"msg": output,
+		"format": Logger.output_format
 	}
 	_send_message(to_json(log_msg))
 

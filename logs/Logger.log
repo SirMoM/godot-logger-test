@@ -43,3 +43,38 @@
 [13:12:56] [WARN] [FILE] Warn log!
 [13:12:56] [ERROR] [FILE] Error log!
 [13:12:56] [ERROR] [FILE] Error log!
+[10:01:07] [VERBOSE] [FILE] Verbose log!
+[10:01:07] [DEBUG] [FILE] Debug log!
+[10:01:07] [INFO] [FILE] Info log!
+[10:01:07] [WARN] [FILE] Warn log!
+[10:01:07] [ERROR] [FILE] Error log!
+[10:01:07] [DEBUG] [FILE] Debug log!
+[10:01:07] [INFO] [FILE] Info log!
+[10:01:07] [WARN] [FILE] Warn log!
+[10:01:07] [ERROR] [FILE] Error log!
+[10:01:07] [INFO] [FILE] Info log!
+[10:01:07] [WARN] [FILE] Warn log!
+[10:01:07] [ERROR] [FILE] Error log!
+[10:01:07] [WARN] [FILE] Warn log!
+[10:01:07] [ERROR] [FILE] Error log!
+[10:01:07] [ERROR] [FILE] Error log!
+[11:01:25] [VERBOSE] [FILE] Verbose log!
+[11:01:25] [DEBUG] [FILE] Debug log!
+[11:01:26] [INFO] [FILE] Info log!
+[11:01:26] [WARN] [FILE] Warn log!
+[11:01:26] [ERROR] [FILE] Unconfigured error. Error log!
+[11:01:26] [DEBUG] [FILE] Debug log!
+[11:01:26] [INFO] [FILE] Info log!
+[11:01:26] [WARN] [FILE] Warn log!
+[11:01:26] [ERROR] [FILE] Unconfigured error. Error log!
+[11:01:26] [INFO] [FILE] Info log!
+[11:01:26] [WARN] [FILE] Warn log!
+[11:01:26] [ERROR] [FILE] Unconfigured error. Error log!
+[11:01:26] [WARN] [FILE] Warn log!
+[11:01:26] [ERROR] [FILE] Unconfigured error. Error log!
+[11:01:26] [ERROR] [FILE] Unconfigured error. Error log!
+[14:01:24] [VERBOSE] [FILE] Verbose log!
+[14:01:24] [DEBUG] [FILE] Debug log!
+[14:01:24] [INFO] [FILE] Info log!
+[14:01:24] [WARN] [FILE] Warn log!
+[14:01:24] [ERROR] [FILE] Unconfigured error. Error log!

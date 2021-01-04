@@ -60,13 +60,13 @@ func test_all_levels(_module):
 		Logger.debug("Debug log!", _module)
 		Logger.info("Info log!", _module)
 		Logger.warn("Warn log!", _module)
-		Logger.error("Error log!", _module)
+		Logger.error("Error log!", _module, 3)
 	else:
 		Logger.verbose("Verbose log!")
 		Logger.debug("Debug log!")
 		Logger.info("Info log!")
 		Logger.warn("Warn log!")
-		Logger.error("Error log!")
+		Logger.error("Error log!", 3)
 
 
 func _on_TestsVerbose_pressed(module) -> void:
