@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "LoggingConsoleProxy",
+"language": "GDScript",
+"path": "res://client/ExternalSinkProxy.gd"
+}, {
+"base": "Node",
+"class": "WS_LoggingClient",
+"language": "GDScript",
+"path": "res://client/Client.gd"
+} ]
 _global_script_class_icons={
-
+"LoggingConsoleProxy": "",
+"WS_LoggingClient": ""
 }
 
 [application]

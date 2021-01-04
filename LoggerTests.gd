@@ -10,7 +10,7 @@ warn   |	X	|	X	|	X	|	✓	|	✓	|
 error  |	X	|	X	|	X	|	x	|	✓	|"""
 
 onready var feedback_label = $RichTextLabel
-
+const loggingProxy = preload("res://client/ExternalSinkProxy.gd")
 var standart_module
 var named_module
 var logfile_module
@@ -20,6 +20,14 @@ func _ready() -> void:
 	standart_module = Logger.get_module()
 
 	named_module = Logger.get_module("App")
+	named_module.external_sink = LoggingConsoleProxy.new("proxy", get_tree().get_root())
+	named_module.output_strategies = [
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK,
+		Logger.STRATEGY_EXTERNAL_SINK
+	]
 
 	logfile_module = Logger.get_module("FILE")
 	logfile_module.external_sink = Logger.Logfile.new("res://logs/Logger.log")
