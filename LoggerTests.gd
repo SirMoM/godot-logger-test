@@ -166,9 +166,9 @@ func _on_AutomaticTest_pressed() -> void:
 		test_cases(level, "FILE")
 		feedback_label.text += "App %s test done!\n" % Logger.LEVELS[level]
 	feedback_label.text += "All FILE tests done!\n\n"
-	
+
+
 func wait(sek: int):
 	print("Timer started.")
 	yield(get_tree().create_timer(100.0), "timeout")
 	print("Timer ended.")
-
