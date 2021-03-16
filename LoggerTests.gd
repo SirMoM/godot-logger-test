@@ -57,15 +57,26 @@ func test_cases(_loglevel, _module = null):
 func test_all_levels(_module):
 	if _module:
 		Logger.verbose("Verbose log!", _module)
+		print("Timer started.")
+		yield(get_tree().create_timer(1.0), "timeout")
+		print("Timer ended.")
+
 		Logger.debug("Debug log!", _module)
+		wait(1)
 		Logger.info("Info log!", _module)
+		wait(1)
 		Logger.warn("Warn log!", _module)
+		wait(1)
 		Logger.error("Error log!", _module, 3)
 	else:
 		Logger.verbose("Verbose log!")
+		wait(1)
 		Logger.debug("Debug log!")
+		wait(1)
 		Logger.info("Info log!")
+		wait(1)
 		Logger.warn("Warn log!")
+		wait(1)
 		Logger.error("Error log!", 3)
 
 
@@ -155,3 +166,9 @@ func _on_AutomaticTest_pressed() -> void:
 		test_cases(level, "FILE")
 		feedback_label.text += "App %s test done!\n" % Logger.LEVELS[level]
 	feedback_label.text += "All FILE tests done!\n\n"
+	
+func wait(sek: int):
+	print("Timer started.")
+	yield(get_tree().create_timer(100.0), "timeout")
+	print("Timer ended.")
+

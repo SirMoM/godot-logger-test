@@ -27,6 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="godot-logger-test"
+run/main_scene="res://LoggerTests.tscn"
 
 [autoload]
 

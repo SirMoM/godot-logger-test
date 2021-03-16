@@ -55,10 +55,11 @@ func _on_connection_established(protocol: String):
 
 func _on_connection_closed(was_clean_close: bool):
 	print("Connection closed. was disconected cleanly: %s" % was_clean_close)
+	connect_to_server()
 
 func _on_connection_error():
 	print("Could not connect to Server at: %s" % websocket_url)
-
+	connect_to_server()
 func _on_close_request(code: int, reason: String):
 	wsc.disconnect_from_host()
 
